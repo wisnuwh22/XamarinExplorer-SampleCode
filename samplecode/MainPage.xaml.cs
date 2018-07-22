@@ -12,6 +12,19 @@ namespace samplecode
         public MainPage()
         {
             InitializeComponent();
+            this.BindingContext = new List<string>()
+            {
+                "Accordion ListView",
+                "Custom Input"
+            };
+        }
+
+        void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+            => ((ListView)sender).SelectedItem = null;
+
+        void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var menu = e.SelectedItem as string;
         }
     }
 }
