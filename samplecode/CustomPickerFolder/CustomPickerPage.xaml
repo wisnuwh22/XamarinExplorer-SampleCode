@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:control="clr-namespace:samplecode.CustomPickerFolder"
+             Title="Custom Picker"
+             x:Class="samplecode.CustomPickerFolder.CustomPickerPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Padding="30,0,30,0">
+            <Label Text="Choose Your Origin!" TextColor="#9b59b6" FontSize="Large" />
+            <control:CustomPicker Title="Select Country" ItemsSource="{Binding .}" PlaceholderColor="#4b86b4" TextSize="24"/>
+            <control:CustomPicker Title="Select State" ItemsSource="{Binding .}" PlaceholderColor="#ffa500" TextSize="18"/>
+            <control:CustomPicker Title="Select City" ItemsSource="{Binding .}" PlaceholderColor="#2ee0bd" TextSize="12"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

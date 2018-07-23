@@ -12,5 +12,9 @@
   <ItemGroup>
     <Folder Include="AccordionListView\" />
     <Folder Include="CustomControls\" />
+    <Folder Include="CustomPickerFolder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="CustomPicker\CustomPIcker.cs" />
   </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@ namespace samplecode.AccordionListView
         {
             InitializeComponent();
             BindingContext = viewModel = new AccordionViewModel();
-
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -20,7 +20,6 @@ namespace samplecode.AccordionListView
             ListView listView = sender as ListView;
             listView.SelectedItem = null;
         }
-
 
         async void Handle_Tapped(object sender, EventArgs e)
         {

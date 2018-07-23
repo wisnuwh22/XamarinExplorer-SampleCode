@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using samplecode.AccordionListView;
+using samplecode.CustomPickerFolder;
 using Xamarin.Forms;
 
 namespace samplecode
@@ -27,8 +28,11 @@ namespace samplecode
         async void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var menu = e.SelectedItem as string;
+
             if (menu == "Accordion ListView")
                 await Navigation.PushAsync(new NavigationPage(new AccordionPage()));
+            else if (menu == "Custom Picker")
+                await Navigation.PushAsync(new NavigationPage(new CustomPickerPage()));
         }
     }
 }
