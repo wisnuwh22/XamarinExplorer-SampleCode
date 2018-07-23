@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using samplecode.AccordionListView;
 using Xamarin.Forms;
 
 namespace samplecode
@@ -15,16 +16,19 @@ namespace samplecode
             this.BindingContext = new List<string>()
             {
                 "Accordion ListView",
-                "Custom Input"
+                "Custom Picker"
             };
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
             => ((ListView)sender).SelectedItem = null;
 
-        void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var menu = e.SelectedItem as string;
+            if (menu == "Accordion ListView")
+                await Navigation.PushAsync(new NavigationPage(new AccordionPage()));
         }
     }
 }

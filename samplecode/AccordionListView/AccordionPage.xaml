@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Accordion"
+             x:Class="samplecode.AccordionListView.AccordionPage">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Countries}" ItemTapped="Handle_ItemTapped" SeparatorVisibility="None" HasUnevenRows="true">
+              <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Grid Padding="15">
+                                    <Label Text="{Binding CountryName}" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                    <Image Source="{Binding ArrowIconSource}" HeightRequest="15" WidthRequest="15" VerticalOptions="Center" 
+                                           HorizontalOptions="End">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="Handle_Tapped"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                
+                                </Grid>
+                                <Grid IsVisible="{Binding IsChildrenVisible}" HeightRequest="{Binding ChildrenRowHeightRequest}">
+                                    <ListView ItemsSource="{Binding Cities}" SeparatorVisibility="None" HasUnevenRows="false">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <Grid Padding="15">
+                                                        <Label Text="{Binding CityName}" FontSize="14" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                                        <Image Source="rightarrow.png" HeightRequest="12" WidthRequest="12" VerticalOptions="Center" 
+                                                                HorizontalOptions="End"/>
+                                                    </Grid>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>              
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

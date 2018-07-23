@@ -9,4 +9,8 @@
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AccordionListView\" />
+    <Folder Include="CustomControls\" />
+  </ItemGroup>
 </Project>
