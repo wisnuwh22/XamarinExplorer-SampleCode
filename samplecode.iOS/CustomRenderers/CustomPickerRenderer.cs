@@ -9,7 +9,7 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ExportRenderer(typeof(CustomPicker), typeof(CustomPickerRenderer))]
 namespace samplecode.iOS.CustomRenderers
 {
-    public class CustomPickerRenderer: PickerRenderer
+    public class CustomPickerRenderer : PickerRenderer
     {
         protected override void OnElementChanged(ElementChangedEventArgs<Picker> e)
         {
@@ -18,33 +18,42 @@ namespace samplecode.iOS.CustomRenderers
             {
                 var customPicker = e.NewElement as CustomPicker;
 
-                // Placeholder Color
-                string placeholderColor = customPicker.PlaceholderColor;
-                UIColor color = UIColor.FromRGB(GetRed(placeholderColor), GetGreen(placeholderColor), GetBlue(placeholderColor));
 
-                // Font Size
+                // get Bindable properties
+                UIColor placeholderColor = GetUIColor(customPicker.PlaceholderColor);
+                float textSize = (float)customPicker.TextSize;
+
+
+                // create font decsriptor
                 var label = new UILabel();
-                var originalDescriptor = label.Font.FontDescriptor;
-                var newDescriptor = originalDescriptor.CreateWithAttributes(new UIFontAttributes()
+                var fontDescriptor = label.Font.FontDescriptor;
+
+                // adjusting font size
+                var newDescriptor = fontDescriptor.CreateWithAttributes(new UIFontAttributes()
                 {
-                    Size = (float)customPicker.TextSize
+                    Size = textSize
                 });
-
                 UIFont font = UIFont.FromDescriptor(newDescriptor, 0);
-                //font.WithSize((float)customPicker.TextSize);
 
+
+                // set attributes
                 var placeholderAttributes = new NSAttributedString(customPicker.Title, new UIStringAttributes()
-                { ForegroundColor = color, Font = font });
+                { ForegroundColor = placeholderColor, Font = font });
 
                 Control.AttributedPlaceholder = placeholderAttributes;
 
 
                 var textAttributes = new NSAttributedString(customPicker.Title, new UIStringAttributes()
-                { ForegroundColor = color, Font = font });
+                { ForegroundColor = placeholderColor, Font = font });
 
                 Control.AttributedText = textAttributes;
 
             }
+        }
+
+        private UIColor GetUIColor(string color)
+        {
+            return UIColor.FromRGB(GetRed(color), GetGreen(color), GetBlue(color));
         }
 
         private float GetRed(string color)

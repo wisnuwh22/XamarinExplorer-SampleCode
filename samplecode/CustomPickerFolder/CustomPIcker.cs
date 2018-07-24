@@ -15,12 +15,14 @@ namespace samplecode.CustomPickerFolder
         }
 
         public static BindableProperty PlaceholderColorProperty =
-            BindableProperty.Create(nameof(PlaceholderColor), typeof(string), typeof(CustomPicker), "#CCCCCC", BindingMode.TwoWay);
+            BindableProperty.Create(nameof(PlaceholderColor), typeof(string), typeof(CustomPicker), DefaultColor, BindingMode.TwoWay);
 
         public string PlaceholderColor
         {
             get { return (string)GetValue(PlaceholderColorProperty); }
             set { SetValue(PlaceholderColorProperty, value); }
         }
+
+        public static string DefaultColor => "#CCCCCC";
     }
 }
