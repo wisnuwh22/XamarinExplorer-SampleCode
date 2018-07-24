@@ -38,6 +38,12 @@ namespace samplecode.iOS.CustomRenderers
 
                 Control.AttributedPlaceholder = placeholderAttributes;
 
+
+                var textAttributes = new NSAttributedString(customPicker.Title, new UIStringAttributes()
+                { ForegroundColor = color, Font = font });
+
+                Control.AttributedText = textAttributes;
+
             }
         }
 

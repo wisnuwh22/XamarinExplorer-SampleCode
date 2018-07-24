@@ -24,7 +24,7 @@ namespace samplecode.AccordionListView
         async void Handle_Tapped(object sender, EventArgs e)
         {
             Image image = sender as Image;
-            await image.RotateTo(180, 300);
+            await image.RotateTo(180);
             Grid grid = image.Parent as Grid;
             Label label = grid.Children[0] as Label;
             viewModel.ShowCities(label.Text);
