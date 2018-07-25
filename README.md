@@ -1,2 +1,2 @@
 # Xamarin Explorer Sample Code
-For more complete explanation about this sample code, you can visit my blog at https://xamarinexplorer.com/
+This repository contains source code of Xamarin Forms examples that I discuss in my blog. For more detail and complete explanation about this code, you can visit my blog at https://xamarinexplorer.com/
