@@ -17,7 +17,7 @@ namespace samplecode.Droid.CustomRenderers
         protected override void OnElementChanged(ElementChangedEventArgs<Picker> e)
         {
             base.OnElementChanged(e);
-            if (e.OldElement != null || e.NewElement != null)
+            if (e.NewElement != null)
             {
                 var customPicker = e.NewElement as CustomPicker;
                 Control.TextSize *= (customPicker.TextSize * 0.01f);

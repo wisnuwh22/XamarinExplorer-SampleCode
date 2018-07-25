@@ -30,7 +30,7 @@ namespace samplecode.AccordionListView
                 if (Cities != null)
                     return Cities.Count * 50;
                 else
-                    return 0;
+                    return 0;   
             }
         }
     }

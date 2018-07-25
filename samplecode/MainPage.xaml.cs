@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using samplecode.AccordionListView;
 using samplecode.CustomPickerFolder;
+using samplecode.InputForm;
 using Xamarin.Forms;
 
 namespace samplecode
@@ -17,7 +18,8 @@ namespace samplecode
             this.BindingContext = new List<string>()
             {
                 "Accordion ListView",
-                "Custom Picker"
+                "Custom Picker",
+                "Input Form"
             };
             NavigationPage.SetHasNavigationBar(this, false);
         }
@@ -33,6 +35,8 @@ namespace samplecode
                 await Navigation.PushAsync(new NavigationPage(new AccordionPage()));
             else if (menu == "Custom Picker")
                 await Navigation.PushAsync(new NavigationPage(new CustomPickerPage()));
+            else if (menu == "Input Form")
+                await Navigation.PushAsync(new NavigationPage(new InputFormPage()));
         }
     }
 }

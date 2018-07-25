@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="samplecode.InputForm.DisplayFormPage">
+    <ContentPage.Content>
+
+        <StackLayout Margin="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Column="0" Text="{Binding StringEntryPlaceholer}" TextColor="{Binding TitleColor}"/>
+                <Label Grid.Column="1" Text="{Binding Name}" />
+                
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Column="0" Text="{Binding DateTimeTitle}" TextColor="{Binding TitleColor}"/>
+                <Label Grid.Column="1" Text="{Binding GetEstimatedDateTime}" />
+                
+            </Grid>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Column="0" Text="{Binding EditorPlaceholder}" TextColor="{Binding TitleColor}"/>
+                <Label Grid.Column="1" Text="{Binding Desription}" />
+                
+            </Grid>
+
+            <Button Text="Done" BorderWidth="1" HorizontalOptions="FillAndExpand" 
+                BorderColor="{Binding TitleColor}" Clicked="Handle_Clicked"/>
+        </StackLayout>
+        
+
+    </ContentPage.Content>
+</ContentPage>

@@ -19,7 +19,6 @@
                                                 NumberOfTapsRequired="1" />
                                         </Image.GestureRecognizers>
                                     </Image>
-                                
                                 </Grid>
                                 <Grid IsVisible="{Binding IsChildrenVisible}" HeightRequest="{Binding ChildrenRowHeightRequest}">
                                     <ListView ItemsSource="{Binding Cities}" SeparatorVisibility="None" HasUnevenRows="false">

@@ -81,6 +81,9 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CustomRenderers\CustomPickerRenderer.cs" />
+    <Compile Include="CustomRenderers\CustomDatePickerRenderer.cs" />
+    <Compile Include="CustomRenderers\CustomTimePickerRenderer.cs" />
+    <Compile Include="CustomRenderers\CustomEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

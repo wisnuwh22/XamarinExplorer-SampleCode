@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:converter="clr-namespace:samplecode.Converters"
+             xmlns:custom="clr-namespace:samplecode.InputForm"
+             x:Class="samplecode.InputForm.InputFormPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:DecimalConverter x:Key="DecimalConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            <custom:TitledEntry Placeholder="{Binding StringEntryPlaceholer}" Text="{Binding Name}" 
+                                PlaceholderColor="{Binding TitleColor}"/>
+            <custom:TitledDateTimePicker Title="{Binding DateTimeTitle}" 
+                                         SelectedDateTime="{Binding EstimatedDateTime}"/>
+            <custom:TitledEditor Placeholder="{Binding EditorPlaceholder}" Text="{Binding Desription}" 
+                                 PlaceholderColor="{Binding TitleColor}"/>
+            <Button Text="Submit" Clicked="Handle_Clicked" BorderColor="{Binding TitleColor}" 
+                    BorderWidth="1" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

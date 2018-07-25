@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:custom="clr-namespace:samplecode.InputForm"
+             x:Class="samplecode.InputForm.TitledEntry">
+    <ContentView.Content>
+        <Grid Focused="Handle_ContainerFocused">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="LabelTitle" TextColor="{Binding PlaceholderColor}" />
+            <custom:CustomEntry Grid.Row="1" x:Name="EntryContent" Placeholder="{Binding Placeholder}" Text="{Binding Text}"
+                                PlaceholderColor="{Binding PlaceholderColor}" Focused="Handle_Focused" FontSize="{Binding FontSize}"
+                                Unfocused="Handle_Unfocused" TextChanged="Handle_TextChanged"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
