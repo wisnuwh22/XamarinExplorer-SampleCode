@@ -21,6 +21,8 @@
     <Folder Include="CheckBoxRadioButton\CustomControls\" />
     <Folder Include="CheckBoxRadioButton\ViewModels\" />
     <Folder Include="NestedCheckBox\" />
+    <Folder Include="NestedCheckBox\CustomControls\" />
+    <Folder Include="NestedCheckBox\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="CustomPicker\CustomPIcker.cs" />
