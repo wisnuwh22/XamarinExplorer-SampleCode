@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using samplecode.AccordionListView;
+using samplecode.CheckBoxRadioButton;
 using samplecode.CustomPickerFolder;
 using samplecode.InputForm;
 using Xamarin.Forms;
@@ -19,7 +20,8 @@ namespace samplecode
             {
                 "Accordion ListView",
                 "Custom Picker",
-                "Input Form"
+                "Input Form",
+                "CheckBox & RadioButton"
             };
             NavigationPage.SetHasNavigationBar(this, false);
         }
@@ -37,6 +39,8 @@ namespace samplecode
                 await Navigation.PushAsync(new NavigationPage(new CustomPickerPage()));
             else if (menu == "Input Form")
                 await Navigation.PushAsync(new NavigationPage(new InputFormPage()));
+            else if (menu == "CheckBox & RadioButton")
+                await Navigation.PushAsync(new NavigationPage(new PickingColorPage()));
         }
     }
 }

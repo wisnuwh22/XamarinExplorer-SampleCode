@@ -163,6 +163,9 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>3.1.0.637273</Version>
     </PackageReference>
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView">
+      <Version>2.0.11</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -176,6 +179,11 @@
     <BundleResource Include="Resources\downarrow.png" />
     <BundleResource Include="Resources\rightarrow.png" />
     <BundleResource Include="Resources\uparrow.png" />
+    <BundleResource Include="Resources\CheckBox.png" />
+    <BundleResource Include="Resources\CheckBoxEmpty.png" />
+    <BundleResource Include="Resources\CheckBoxEmptyDisable.png" />
+    <BundleResource Include="Resources\RadioButtonChecked.png" />
+    <BundleResource Include="Resources\RadioButtonUnchecked.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomRenderers\" />

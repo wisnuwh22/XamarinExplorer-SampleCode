@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:samplecode.CheckBoxRadioButton"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="samplecode.CheckBoxRadioButton.PickingColorPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+             <flv:FlowListView Grid.Row="0" HeightRequest="80"
+                    FlowItemsSource="{Binding ListRadioButton}"
+                    FlowLastTappedItem="{Binding SelectedRadioButton}"
+                    FlowItemTappedCommand="{Binding RadioButtonTappedCommand}"
+                    FlowColumnCount="2"
+                    SeparatorVisibility="None" 
+                    RowHeight="40"
+                    Margin="20,0,20,0"
+                    HasUnevenRows="false">
+                    <flv:FlowListView.FlowColumnTemplate>
+                        <DataTemplate>
+                            <controls:BindableRadioButton MenuTitle="{Binding MenuTitle}" IconSource="{Binding IconSource}"/>
+                        </DataTemplate>
+                    </flv:FlowListView.FlowColumnTemplate>
+                </flv:FlowListView>
+
+            <flv:FlowListView Grid.Row="1"
+                              FlowItemsSource="{Binding ListCheckBox}"
+                              FlowLastTappedItem="{Binding SelectedCheckBox}"
+                              FlowItemTappedCommand="{Binding CheckBoxTappedCommand}"
+                              FlowColumnCount="1"
+                              SeparatorVisibility="None" 
+                              RowHeight="40"
+                              HasUnevenRows="false">
+                              <flv:FlowListView.FlowColumnTemplate>
+                                   <DataTemplate>
+                                          <controls:BindableCheckBox MenuTitle="{Binding MenuTitle}" 
+                                                                     IconSource="{Binding IconSource}" 
+                                                                     TitleColor="{Binding TitleColor}"
+                                                                     IsEnabled="{Binding IsEnabled}"/>
+                                            </DataTemplate>
+                                </flv:FlowListView.FlowColumnTemplate>
+                             </flv:FlowListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

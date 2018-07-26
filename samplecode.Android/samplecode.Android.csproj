@@ -75,6 +75,9 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter">
       <Version>27.0.2.1</Version>
     </PackageReference>
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView">
+      <Version>2.0.11</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -111,6 +114,11 @@
     <AndroidResource Include="Resources\drawable\rightarrow.png" />
     <AndroidResource Include="Resources\drawable\uparrow.png" />
     <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\CheckBox.png" />
+    <AndroidResource Include="Resources\drawable\CheckBoxEmpty.png" />
+    <AndroidResource Include="Resources\drawable\CheckBoxEmptyDisable.png" />
+    <AndroidResource Include="Resources\drawable\RadioButtonChecked.png" />
+    <AndroidResource Include="Resources\drawable\RadioButtonUnchecked.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
