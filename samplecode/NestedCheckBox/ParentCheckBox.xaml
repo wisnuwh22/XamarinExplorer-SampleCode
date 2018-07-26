@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="samplecode.NestedCheckBox.ParentCheckBox">
+    <ContentView.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Text="{Binding MenuTitle}" 
+                   HorizontalOptions="Start" VerticalOptions="Center" 
+                   LineBreakMode="WordWrap" FontAttributes="Bold"/>
+            <Image Grid.Column="1" Source="{Binding IconSource}" 
+                   HorizontalOptions="End" VerticalOptions="Center" 
+                   WidthRequest="20" HeightRequest="20"/>
+            
+        </Grid>
+    </ContentView.Content>
+</ContentView>

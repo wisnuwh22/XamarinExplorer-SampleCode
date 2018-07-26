@@ -20,6 +20,7 @@
     <Folder Include="InputForm\CustomControls\" />
     <Folder Include="CheckBoxRadioButton\CustomControls\" />
     <Folder Include="CheckBoxRadioButton\ViewModels\" />
+    <Folder Include="NestedCheckBox\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="CustomPicker\CustomPIcker.cs" />

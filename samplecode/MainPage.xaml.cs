@@ -7,6 +7,7 @@ using samplecode.AccordionListView;
 using samplecode.CheckBoxRadioButton;
 using samplecode.CustomPickerFolder;
 using samplecode.InputForm;
+using samplecode.NestedCheckBox;
 using Xamarin.Forms;
 
 namespace samplecode
@@ -21,7 +22,8 @@ namespace samplecode
                 "Accordion ListView",
                 "Custom Picker",
                 "Input Form",
-                "CheckBox & RadioButton"
+                "CheckBox & RadioButton",
+                "Nested CheckBox"
             };
             NavigationPage.SetHasNavigationBar(this, false);
         }
@@ -41,6 +43,8 @@ namespace samplecode
                 await Navigation.PushAsync(new NavigationPage(new InputFormPage()));
             else if (menu == "CheckBox & RadioButton")
                 await Navigation.PushAsync(new NavigationPage(new PickingColorPage()));
+            else if (menu == "Nested CheckBox")
+                await Navigation.PushAsync(new NavigationPage(new NestedCheckBoxPage()));
         }
     }
 }

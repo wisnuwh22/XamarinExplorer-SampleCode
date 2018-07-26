@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:samplecode.NestedCheckBox"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" 
+             x:Class="samplecode.NestedCheckBox.NestedCheckBoxPage">
+    <ContentPage.Content>
+        <flv:FlowListView FlowItemsSource="{Binding ListParent}"
+                         FlowLastTappedItem="{Binding SelectedParent}"
+                         FlowItemTappedCommand="{Binding ParentTappedCommand}"
+                         FlowColumnCount="1"
+                         SeparatorVisibility="None"
+                         Margin="20"
+                         RowHeight="280"
+                         HasUnevenRows="false">
+                         <flv:FlowListView.FlowColumnTemplate>
+                               <DataTemplate>
+                                <Grid Margin="20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                     <controls:ParentCheckBox MenuTitle="{Binding MenuTitle}" 
+                                                              IconSource="{Binding IconSource}" HeightRequest="40"/>
+                                     <flv:FlowListView Grid.Row="1"
+                                                       FlowItemsSource="{Binding Children}"
+                                                       FlowLastTappedItem="{Binding SelectedChild}"
+                                                       FlowItemTappedCommand="{Binding ChildTappedCommand}"
+                                                       FlowColumnCount="1"
+                                                       SeparatorVisibility="None" 
+                                                       RowHeight="40"
+                                                       HasUnevenRows="false">
+                                                       <flv:FlowListView.FlowColumnTemplate>
+                                                            <DataTemplate>
+                                                                    <controls:ChildrenCheckBox MenuTitle="{Binding ChildrenCheckBoxViewModel.MenuTitle}" 
+                                                                                               IconSource="{Binding ChildrenCheckBoxViewModel.IconSource}" />
+                                                            </DataTemplate>
+                                                        </flv:FlowListView.FlowColumnTemplate>
+                                     </flv:FlowListView>
+                                </Grid>
+                               </DataTemplate>
+                          </flv:FlowListView.FlowColumnTemplate>
+       </flv:FlowListView>
+    </ContentPage.Content>
+</ContentPage>
