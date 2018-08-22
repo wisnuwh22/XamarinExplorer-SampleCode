@@ -184,6 +184,16 @@
     <BundleResource Include="Resources\CheckBoxEmptyDisable.png" />
     <BundleResource Include="Resources\RadioButtonChecked.png" />
     <BundleResource Include="Resources\RadioButtonUnchecked.png" />
+    <BundleResource Include="Resources\nine.png" />
+    <BundleResource Include="Resources\one.png" />
+    <BundleResource Include="Resources\seven.png" />
+    <BundleResource Include="Resources\six.png" />
+    <BundleResource Include="Resources\ten.png" />
+    <BundleResource Include="Resources\three.png" />
+    <BundleResource Include="Resources\two.png" />
+    <BundleResource Include="Resources\eight.png" />
+    <BundleResource Include="Resources\five.png" />
+    <BundleResource Include="Resources\four.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomRenderers\" />

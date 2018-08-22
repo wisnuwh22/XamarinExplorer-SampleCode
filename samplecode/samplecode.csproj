@@ -23,6 +23,7 @@
     <Folder Include="NestedCheckBox\" />
     <Folder Include="NestedCheckBox\CustomControls\" />
     <Folder Include="NestedCheckBox\ViewModels\" />
+    <Folder Include="HorizontalListView\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="CustomPicker\CustomPIcker.cs" />

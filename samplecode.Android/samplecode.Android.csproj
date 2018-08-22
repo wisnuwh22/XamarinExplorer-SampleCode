@@ -119,6 +119,16 @@
     <AndroidResource Include="Resources\drawable\CheckBoxEmptyDisable.png" />
     <AndroidResource Include="Resources\drawable\RadioButtonChecked.png" />
     <AndroidResource Include="Resources\drawable\RadioButtonUnchecked.png" />
+    <AndroidResource Include="Resources\drawable\nine.png" />
+    <AndroidResource Include="Resources\drawable\one.png" />
+    <AndroidResource Include="Resources\drawable\seven.png" />
+    <AndroidResource Include="Resources\drawable\six.png" />
+    <AndroidResource Include="Resources\drawable\ten.png" />
+    <AndroidResource Include="Resources\drawable\three.png" />
+    <AndroidResource Include="Resources\drawable\two.png" />
+    <AndroidResource Include="Resources\drawable\eight.png" />
+    <AndroidResource Include="Resources\drawable\five.png" />
+    <AndroidResource Include="Resources\drawable\four.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
