@@ -5,10 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
-    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.3.840" />
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.4.859" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.4.859" />
     <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
+    <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xamarin.Forms.DialogKit" Version="1.5.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AccordionListView\" />
@@ -24,6 +27,9 @@
     <Folder Include="NestedCheckBox\CustomControls\" />
     <Folder Include="NestedCheckBox\ViewModels\" />
     <Folder Include="HorizontalListView\" />
+    <Folder Include="SQLiteORM\" />
+    <Folder Include="SQLiteORM\View\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="CustomPicker\CustomPIcker.cs" />

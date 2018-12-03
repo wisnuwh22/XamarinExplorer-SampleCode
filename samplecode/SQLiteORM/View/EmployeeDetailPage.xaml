@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="samplecode.SQLiteORM.EmployeeDetailPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="{Binding WifeName}"/>
+            <Label Text="{Binding FirstChildName}"/>
+            <Label Text="{Binding SecondChildName}"/>
+            <ListView ItemsSource="{Binding Benefits}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="{Binding BenefitName}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                <Label Text="{Binding BenefitValue}" HorizontalOptions="End" VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

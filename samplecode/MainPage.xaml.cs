@@ -9,6 +9,7 @@ using samplecode.CustomPickerFolder;
 using samplecode.HorizontalListView;
 using samplecode.InputForm;
 using samplecode.NestedCheckBox;
+using samplecode.SQLiteORM;
 using Xamarin.Forms;
 
 namespace samplecode
@@ -25,7 +26,8 @@ namespace samplecode
                 "Input Form",
                 "CheckBox & RadioButton",
                 "Nested CheckBox",
-                "Horizontal ListView"
+                "Horizontal ListView",
+                "SQLite ORM"
             };
             NavigationPage.SetHasNavigationBar(this, false);
         }
@@ -49,6 +51,8 @@ namespace samplecode
                 await Navigation.PushAsync(new NavigationPage(new NestedCheckBoxPage()));
             else if (menu == "Horizontal ListView")
                 await Navigation.PushAsync(new NavigationPage(new HorizontalPage()));
+            else if (menu == "SQLite ORM")
+                await Navigation.PushAsync(new NavigationPage(new DepartmentPage()));
         }
     }
 }
