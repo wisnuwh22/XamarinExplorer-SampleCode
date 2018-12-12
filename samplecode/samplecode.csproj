@@ -12,6 +12,7 @@
     <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
     <PackageReference Include="Xamarin.Forms.DialogKit" Version="1.5.0" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="2.7.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AccordionListView\" />
@@ -30,6 +31,7 @@
     <Folder Include="SQLiteORM\" />
     <Folder Include="SQLiteORM\View\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="AirbnbLottie\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="CustomPicker\CustomPIcker.cs" />

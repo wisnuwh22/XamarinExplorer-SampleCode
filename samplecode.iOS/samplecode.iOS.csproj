@@ -178,6 +178,17 @@
     <BundleResource Include="Resources\eight.png" />
     <BundleResource Include="Resources\five.png" />
     <BundleResource Include="Resources\four.png" />
+    <BundleResource Include="Resources\.DS_Store" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\check_animation.json" />
+    <BundleResource Include="Resources\idea_bulb.json" />
+    <BundleResource Include="Resources\microwave_oven.json" />
+    <BundleResource Include="Resources\washing_machine.json" />
+    <BundleResource Include="Resources\cart.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomRenderers\" />

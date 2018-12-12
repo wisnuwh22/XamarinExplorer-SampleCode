@@ -158,5 +158,12 @@
       <Name>samplecode</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\cart.json" />
+    <AndroidAsset Include="Assets\check_animation.json" />
+    <AndroidAsset Include="Assets\idea_bulb.json" />
+    <AndroidAsset Include="Assets\microwave_oven.json" />
+    <AndroidAsset Include="Assets\washing_machine.json" />
+  </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

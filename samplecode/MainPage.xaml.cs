@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using samplecode.AccordionListView;
+using samplecode.AirbnbLottie;
 using samplecode.CheckBoxRadioButton;
 using samplecode.CustomPickerFolder;
 using samplecode.HorizontalListView;
@@ -27,7 +24,8 @@ namespace samplecode
                 "CheckBox & RadioButton",
                 "Nested CheckBox",
                 "Horizontal ListView",
-                "SQLite ORM"
+                "SQLite ORM",
+                "Airbnb Lottie"
             };
             NavigationPage.SetHasNavigationBar(this, false);
         }
@@ -53,6 +51,8 @@ namespace samplecode
                 await Navigation.PushAsync(new NavigationPage(new HorizontalPage()));
             else if (menu == "SQLite ORM")
                 await Navigation.PushAsync(new NavigationPage(new DepartmentPage()));
+            else if (menu == "Airbnb Lottie")
+                await Navigation.PushAsync(new NavigationPage(new LottieAnimationPage()));
         }
     }
 }

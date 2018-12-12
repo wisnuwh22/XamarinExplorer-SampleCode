@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="samplecode.AirbnbLottie.LottieAnimationPage">
+    <ContentPage.Content>
+        <Grid>  
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <lottie:AnimationView x:Name="AnimationView"
+                                  Animation="{Binding AnimationName}" 
+                                  Loop="false" 
+                                  AutoPlay="true"
+                                  HeightRequest="400"
+                                  PlaybackStartedCommand="{Binding PlayingCommand}"
+                                  PlaybackFinishedCommand="{Binding FinishedCommand}" 
+                                  ClickedCommand="{Binding ClickedCommand}"
+                                  VerticalOptions="FillAndExpand" 
+                                  HorizontalOptions="FillAndExpand"/>
+            <Label Grid.Row="1" Text="{Binding AnimationName}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Label Grid.Row="2" Text="{Binding AnimationPlayed}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
