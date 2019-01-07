@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="samplecode.GridMenu.BreakfastPage">
+    <ContentPage.Content>
+        <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0" HeightRequest="100" Padding="20">
+                <Label Text="What do you want for breakfast?"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="Green" 
+                       FontSize="Large"/>
+            </ContentView>
+
+            <ScrollView Grid.Row="1">
+                <flv:FlowListView
+                    FlowItemsSource="{Binding BreakfastMenuList}"
+                    FlowLastTappedItem="{Binding SelectedBreakfastMenu}"
+                    FlowItemTappedCommand="{Binding MenuTappedCommand}"
+                    FlowColumnCount="2"
+                    SeparatorVisibility="None" 
+                    Margin="30,0,30,0"
+                    HasUnevenRows="True">
+                    <flv:FlowListView.FlowColumnTemplate>
+                        <DataTemplate>
+                            <Frame Margin="15,10,15,10" CornerRadius="5" HeightRequest="120" >
+                                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="-20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Image Grid.Row="1" Source="{Binding ImageSource}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    <ContentView Grid.Row="2" BackgroundColor="{Binding BackgroundColor}" HeightRequest="40">
+                                        <Label Text="{Binding MenuTitle}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </ContentView>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </flv:FlowListView.FlowColumnTemplate>
+                </flv:FlowListView>
+            </ScrollView>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -3,6 +3,7 @@ using samplecode.AccordionListView;
 using samplecode.AirbnbLottie;
 using samplecode.CheckBoxRadioButton;
 using samplecode.CustomPickerFolder;
+using samplecode.GridMenu;
 using samplecode.HorizontalListView;
 using samplecode.InputForm;
 using samplecode.NestedCheckBox;
@@ -25,7 +26,8 @@ namespace samplecode
                 "Nested CheckBox",
                 "Horizontal ListView",
                 "SQLite ORM",
-                "Airbnb Lottie"
+                "Airbnb Lottie",
+                "Grid Menu"
             };
             NavigationPage.SetHasNavigationBar(this, false);
         }
@@ -53,6 +55,9 @@ namespace samplecode
                 await Navigation.PushAsync(new NavigationPage(new DepartmentPage()));
             else if (menu == "Airbnb Lottie")
                 await Navigation.PushAsync(new NavigationPage(new LottieAnimationPage()));
+            else if(menu == "Grid Menu")
+                await Navigation.PushAsync(new NavigationPage(new BreakfastPage()));
+
         }
     }
 }

@@ -32,6 +32,7 @@
     <Folder Include="SQLiteORM\View\" />
     <Folder Include="Interfaces\" />
     <Folder Include="AirbnbLottie\" />
+    <Folder Include="GridMenu\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="CustomPicker\CustomPIcker.cs" />

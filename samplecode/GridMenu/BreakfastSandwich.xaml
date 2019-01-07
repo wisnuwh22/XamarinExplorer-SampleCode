@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<samplecode.GridMenu:CoolContentPage 
+            Title="Sandwich" 
+            xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:samplecode.GridMenu="clr-namespace:samplecode.GridMenu;assembly=Testing"
+            EnableBackButtonOverride="True"
+            x:Class="samplecode.GridMenu.BreakfastSandwich">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Your Breakfast will be Sandwich"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="DarkBlue" 
+                   FontSize="Medium"/>
+            <Image Source="Sandwich.png" HeightRequest="40"/>
+        </StackLayout>
+    </ContentPage.Content>
+</samplecode.GridMenu:CoolContentPage>

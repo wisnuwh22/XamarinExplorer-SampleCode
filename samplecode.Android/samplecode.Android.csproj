@@ -95,6 +95,7 @@
     <Compile Include="CustomRenderers\CustomEntryRenderer.cs" />
     <Compile Include="DependencyServices\SQLiteAndroid.cs" />
     <Compile Include="DependencyServices\ToastHelper.cs" />
+    <Compile Include="CustomRenderers\CoolContentPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -142,6 +143,11 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable\back.png" />
+    <AndroidResource Include="Resources\drawable\Burger.png" />
+    <AndroidResource Include="Resources\drawable\EggBacon.png" />
+    <AndroidResource Include="Resources\drawable\Pizza.png" />
+    <AndroidResource Include="Resources\drawable\Sandwich.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

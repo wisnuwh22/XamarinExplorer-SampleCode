@@ -100,6 +100,7 @@
     <Compile Include="CustomRenderers\CustomEntryRenderer.cs" />
     <Compile Include="DependencyServices\SQLite_iOS.cs" />
     <Compile Include="DependencyServices\ToastHelper.cs" />
+    <Compile Include="CustomRenderers\CoolContentPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -187,6 +188,11 @@
     <BundleResource Include="Resources\check_animation.json" />
     <BundleResource Include="Resources\idea_bulb.json" />
     <BundleResource Include="Resources\washing_machine.json" />
+    <BundleResource Include="Resources\Burger.png" />
+    <BundleResource Include="Resources\EggBacon.png" />
+    <BundleResource Include="Resources\Pizza.png" />
+    <BundleResource Include="Resources\Sandwich.png" />
+    <BundleResource Include="Resources\iosbackarrow%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomRenderers\" />
